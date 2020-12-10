@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Json</title>
+</head>
+<body>
+	<span>Output in Console</span>
+<script type="text/javascript">
+	var file={
+				"problems": [{
+				    "Diabetes":[{
+				        "medications":[{
+				            "medicationsClasses":[{
+				                "className":[{
+				                    "associatedDrug":[{
+				                        "name":"asprin",
+				                        "dose":"",
+				                        "strength":"500 mg"
+				                    }],
+				                    "associatedDrug2":[{
+				                        "name":"somethingElse",
+				                        "dose":"",
+				                        "strength":"500 mg"
+				                    }]
+				                }],
+				                "className2":[{
+				                    "associatedDrug":[{
+				                        "name":"asprin",
+				                        "dose":"",
+				                        "strength":"500 mg"
+				                    }],
+				                    "associatedDrug2":[{
+				                        "name":"somethingElse",
+				                        "dose":"",
+				                        "strength":"500 mg"
+				                    }]
+				                }]
+				            }]
+				        }],
+				        "labs":[{
+				            "missing_field": "missing_value"
+				        }]
+				    }],
+				    "Asthma":[{}]
+				}]}
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className[0].associatedDrug[0].name);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className[0].associatedDrug[0].dose);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className[0].associatedDrug[0].strength);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className[0].associatedDrug2[0].name);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className[0].associatedDrug2[0].dose);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className[0].associatedDrug2[0].strength);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className2[0].associatedDrug[0].name);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className2[0].associatedDrug[0].dose);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className2[0].associatedDrug[0].strength);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className2[0].associatedDrug2[0].name);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className2[0].associatedDrug2[0].dose);
+	console.log(file.problems[0].Diabetes[0].medications[0].medicationsClasses[0].className2[0].associatedDrug2[0].strength);
+	console.log(file.problems[0].Diabetes[0].labs[0].missing_field);
+	console.log(file.problems[0].Asthma[0]);
+</script>
+</body>
+</html>

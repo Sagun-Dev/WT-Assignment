@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Landing Page</title>
+	<style type="text/css">
+		@keyframes Name {
+			0%   {color: #bb3030;}
+			9.09%  {color: #bb309d;}
+			18.18%  {color: #7230bb;}
+			27.27% {color: #303bbb;}
+			36.36%   {color: #30a8bb;}
+			45.45%  {color: #30bb5b;}
+			54.54%  {color: #7230bb;}
+			63.63% {color: #32bb30;}
+			72.72%  {color: #99bb30;}
+			81.81%  {color: #bb8330;}
+			100% {color: #bb3030;}
+		}
+		body{
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		#parent{
+			padding-bottom: 50px;
+			background-color: #ed593d;
+		}
+		#out{
+			background-color: #22252e;
+			border-bottom-right-radius: 100px;
+			height: 400px;
+		}
+		#logo{
+			padding-top: 3%;
+			margin-left: 10%;
+			margin-right:82%;
+			padding-left:1%;
+			background-color: #ed593d;
+			height:50px;
+			font-size: 46px;
+			color: #ffffff;
+		}
+		a:visited,a:link {
+			color:white;
+		}
+		#home{
+			background-color: #22252e;
+			color:#bfb5b5;
+			border-width: 0.1px;
+			border-style: solid;
+			border-color: #aaaaaa;
+			box-shadow: 10px 10px 5px #aaaaaa
+		}
+		#link{
+			position: relative;
+			top:-20%;
+			left:60%;
+			margin-right: 700px;
+			word-spacing: 30px;
+			font-size: 16px;
+		}
+		#signup{
+			border-radius: 20px;
+			height:30px;
+			border:none;
+			background-color: #ffffff;
+			color:#ed593d;
+		}
+		#buy{
+			position: relative;
+			top:-250px;
+			border-radius: 20px;
+			height:30px;
+			border:none;
+			background-color: #ffffff;
+			color:#ed593d;
+		}
+		#detail h1{
+			padding-left: 10%;
+			animation-name: Name;
+			animation-duration: 4s;
+			animation-iteration-count:infinite;
+		}
+		#detail img{
+			position: relative;
+			left: 50%;
+			top:-150px;
+		}
+		h2{
+			text-align: center;
+			text-decoration: underline;
+			font-size: 36px;
+		}
+		h3{
+			text-align: center;
+			text-decoration: underline;
+			font-size: 16px;
+		}
+		.text{
+			font-weight: bold;
+		}
+		table,th,td{
+			border-width: 1px;
+			border-style: solid;
+			margin-left: 50px;
+			margin-bottom: 50px;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div id="home">
+		<div id="parent">
+			<div id="out">
+				<div id="logo"><marquee>MR</marquee></div>
+				<div id="link">
+					<a href="#" class="link">Home</a>
+					<a href="#overview" class="link">Overview</a>
+					<a href="#feature" class="link">Feature</a>
+					<a href="#price" class="link">Price</a>
+					<button id="signup" onclick="document.location='2)Form.html'">Sign Up</button>
+				</div>
+				<div id="detail">
+					<p><h1>iPhone 12 Pro</h1></p>
+					<p>Introducing iPhone 12 Pro with ground breaking technology</p>
+					<img src="./device.png" alt="iPhone 12 Pro">
+				</div>
+				<div>
+					<button id="buy" onclick="document.location='https://www.apple.com/shop/buy-iphone/iphone-12-pro'" style="margin-left:10%;">Buy Now</button>
+				</div>
+			</div>
+		</div>
+		<div>
+			<h2  id="overview">Overview</h2>
+			<h3>It's a Leap Year</h3>
+			<div class="text">
+				5G goes Pro. A14 Bionic rockets past every other smartphone chip. The Pro camera system takes low-light photography to the next level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic Shield delivers four times better drop performance. Let’s see what this thing can do.
+				From $41.62/mo. or $999 before trade‑in1
+			</div>
+			<h3>Less Bezel,more Screen</h3>
+			<div class="text">
+				iPhone 12 Pro Max
+				6.7” Super Retina
+				XDR display2
+			</div>
+			<h3>Kicks glass.</h3>
+			<div class="text">
+				Ceramic Shield, tougher than any smartphone glass
+			</div>
+			<h3>Blows other phones out of the water.</h3>
+			<div class="text">
+				Industry‑leading IP68 water resistance
+			</div>
+			<h2 id="feature">Feature</h2>
+			<table class="text">
+				<tr>
+					<th colspan="2">iPhone 12 Pro</th>
+				</tr>
+				<tr>
+					<td>Finish</td>
+					<td>Silver, Graphite, Gold, Pacific Blue,Ceramic Shield front</td>
+				</tr>
+				<tr>
+					<td rowspan="3">Capacity</td>
+					<td>128 GB</td>
+				</tr>
+				<tr>
+					<td>256 GB</td>
+				</tr>
+				<tr>
+					<td>512 GB</td>
+				</tr>
+				<tr>
+					<td>Size and Weight</td>
+					<td>189 gm</td>
+				</tr>
+				<tr>
+					<td>Display</td>
+					<td>6.1"</td>
+				</tr>
+				<tr>
+					<td>Chip</td>
+					<td>Apple Bionic A14</td>
+				</tr>
+			</table>
+			<h2 id="price">Price</h2>
+			<div class="text">Currently iPhone 12 Pro is sold for $999</div>
+		</div>
+	</div>
+</body>
+</html>
