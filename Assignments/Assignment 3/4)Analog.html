@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Analog Clock</title>
+	<style type="text/css">
+	body{
+		background-image: radial-gradient(#796d6d,green);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% auto;
+	}
+	.clock{
+		height: 500px;
+  		width: 500px;
+  		border-radius: 50%;
+  		position:relative;
+  		border-width: 25px;
+  		border-color: white;
+  		border-style: solid;
+  		box-shadow: 10px 10px 50px inset #aaaaaa,10px 10px 50px #aaaaaa;
+  		background-image: radial-gradient(white, yellow, green);
+  		transform: rotate(90deg);
+	}
+    .hand {
+        width: 250px;
+        height: 3px;
+        position: absolute;
+        margin-top:250px;       
+        border-width: 2px;
+        background-color: black;
+        border-style:solid; 
+        transform-origin: 100%;
+		}
+	</style>
+</head>
+<body>
+	 <div class="clock">
+        <div class="clock-face">
+            <div class="hand hand-hour"></div>
+            <div class="hand hand-minute"></div>
+            <div class="hand hand-seconds"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+    	Time();
+    	function Time(){
+	    	var d = new Date();
+	    	console.log(d);
+	    	var hour=d.getHours();
+	    	var mins=d.getMinutes();
+	    	var secs=d.getSeconds();
+	    	document.querySelector('.hand-seconds').style.transform = `rotate(${(secs/60)*360}deg)`;
+	    	document.querySelector('.hand-minute').style.transform = `rotate(${(mins/60)*360}deg)`;
+	    	document.querySelector('.hand-hour').style.transform = `rotate(${(hour/12)*360}deg)`;
+    	}
+    	setInterval(Time,1000);
+    </script>
+</body>
+</html>

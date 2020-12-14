@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TODO</title>
+	<style type="text/css">
+		li{
+			color:blue;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" placeholder="Enter list item" id="input"/>
+	<ul id="list"></ul>
+	<script type="text/javascript">
+		var todos=window.localStorage.getItem("list_items");
+		var array = todos != null ? JSON.parse(todos) : [];
+		console.log(array);
+		Render();
+		document.getElementById("input").addEventListener("keyup",function(event){
+			if(event.keyCode==13){
+				var item=document.getElementById("input").value;
+				array.push({"item":item,"checked":false});
+				document.getElementById("input").value="";
+				save();
+				Render();
+			}
+		});
+		function Render(){
+			document.getElementById("list").innerHTML = "";
+			array.forEach(function(item,index){
+				if(item.checked==false){
+					var checked=""
+				}else{
+					var checked="checked";
+				}
+			document.getElementById("list").innerHTML+=`<li><input type="checkbox" ${checked} onClick="markAsComplete('${item.item}')">${item.item}</li>`;
+			});		
+	
+		}
+		function markAsComplete(items)
+		{
+			array.forEach(function (item) {
+			if (item.item == items) {
+				item.checked = ! item.checked;
+				return true;
+			}
+			});
+			array.forEach(function(item,index){
+				if(item.checked==false){
+					document.getElementsByTagName("LI")[index].style.color = "red";
+				}else{
+					document.getElementsByTagName("LI")[index].style.color = "green";
+				}
+			});	
+			save();
+		}
+		function save(){
+			window.localStorage.setItem("list_items",JSON.stringify(array));
+		}
+	</script>
+</body>
+</html>
