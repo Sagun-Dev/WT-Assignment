@@ -6,9 +6,11 @@
 <body>
 <script type="text/javascript">
 	var sentence=prompt("Enter a sentence");
+	var revSentence="";
 	for (var i = sentence.length - 1; i >= 0; i--) {
-		console.log(sentence[i]);
+		revSentence+=sentence[i];
 	}
+	console.log(revSentence);
 </script>
 </body>
 </html>
