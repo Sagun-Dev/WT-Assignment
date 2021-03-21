@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dynamic Content</title>
+</head>
+<body>
+<img src="./images/logo.png" id="logo" width="90%" height="600dp">
+<br>
+<input type="button" value="hide" id="btn" onclick="change(value)">
+<script type="text/javascript">
+	function change(value){
+		if(value=="hide"){
+			document.getElementById("logo").style.visibility="hidden";
+			document.getElementById("btn").value="show";
+		}else{
+			document.getElementById("logo").style.visibility="visible";
+			document.getElementById("btn").value="hide";
+		}
+	}
+</script>
+</body>
+</html>

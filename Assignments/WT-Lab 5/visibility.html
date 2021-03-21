@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visibility</title>
+</head>
+<body>
+	<img src="./images/logo.png" id="img">
+	<br>
+	<input type="button" onclick="show()" value="Show">
+	<input type="button" onclick="hide()" value="Hide">
+	<script type="text/javascript">
+		function hide(){
+			document.getElementById("img").style.visibility="hidden";
+		}
+		function show(){
+			document.getElementById("img").style.visibility="visible";
+		}
+	</script>
+</body>
+</html>
