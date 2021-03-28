@@ -49,7 +49,7 @@ foreach( $array as $key => $element) {
 ### &nbsp; &nbsp; String Functions
 &nbsp; &nbsp; The string functions allows you to access and manipulate strings.
 
-&nbsp; &nbsp; Function &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	Uses
+&nbsp; &nbsp; Function &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 	Usage
 
 &nbsp; &nbsp; echo()	&nbsp; &nbsp;  &nbsp; &nbsp;     &nbsp; &nbsp;     outputs one or more strings
 
